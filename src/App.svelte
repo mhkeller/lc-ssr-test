@@ -1,10 +1,9 @@
 <script>
-	import { LayerCake } from 'layercake';
-	export let name;
+	import { Test } from './components/test.js';
 </script>
 
 <div class="chart-container">
-	<LayerCake></LayerCake>
+	<Test></Test>
 </div>
 
 <style>
