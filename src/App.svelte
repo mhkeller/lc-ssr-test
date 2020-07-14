@@ -1,5 +1,5 @@
 <script>
-	import { Test } from './components/test.js';
+	import { Test } from './components/test.mjs';
 </script>
 
 <div class="chart-container">
