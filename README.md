@@ -1,6 +1,8 @@
 ssr test
 ===
 
+> REPL version: https://svelte.dev/repl/47e73637efe44b3e87962343b08adf77?version=3.24.0
+
 ```
 npm install
 ```
