@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
 
-export default {
+const client = {
 	input: 'src/main.js',
 	output: {
 		sourcemap: true,
@@ -52,6 +52,27 @@ export default {
 		clearScreen: false
 	}
 };
+
+const server = {
+	input: 'src/App.svelte',
+	output: {
+		file: 'build/App.js',
+		format: 'cjs',
+		sourcemap: true
+	},
+	plugins: [
+		svelte({
+			generate: 'ssr'
+		}),
+		resolve({
+			browser: true,
+			dedupe: ['svelte']
+		}),
+		commonjs()
+	]
+};
+
+export default [client, server];
 
 function serve() {
 	let started = false;

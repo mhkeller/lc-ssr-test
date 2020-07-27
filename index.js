@@ -1,5 +1,4 @@
-require('svelte/register');
-const App = require("./src/App.svelte").default;
+const App = require("./build/App.js");
 
 const data = App.render({});
 
